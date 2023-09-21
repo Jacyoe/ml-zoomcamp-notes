@@ -44,6 +44,15 @@ $g(x_i) = w_0 + \displaystyle\sum_{j=1}^{n} w_j \cdot x_{ij}$
 
 in code is represented as:
 ~~~~python 
-def path()
+def linear_regression(xi):
+    n = len(xi)
+    pred = w0
+
+    for j in range(n):
+        pred = pred + w[j] * xi[j]
+
+    return pred
 ~~~~
+
+## 2.6 Linear Regression Vector Form
 
