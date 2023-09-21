@@ -73,10 +73,54 @@ $X^TX$ is the Gram Matrix and it's inverse exists because it's a square matrix
 ## 2.8 Baseline Model for Car Price Prediction Project 
 this where we actually solve the problem us
 
-we first implement our Train linear_regression model
+we first implement our Train linear_regression model using the features
 
 then we plot the prediction together with the trained model to see if we are correct
 if the prediction is not accurate, we will need a way to quantity how bad the model is using RMSE
 
-## RMSE - Root Mean Square Error
+## 2.9 RMSE - Root Mean Square Error
 we use this to objectively evaluate the performance of our linear regression model
+
+$$RMSE = \sqrt{ \frac{1}{m} \sum {(g(x_i) - y_i)^2}}$$
+
+- $g(x_i)$ is the prediction
+- $y_i$ is the actual
+- $m$ is the number of observations in the dataset (i.e. cars)
+
+
+# 2.10 Computing RMSE on Validation Data
+Here we take the train-dataset,  train the linear regression model then we apply it to the Validation data and look at the RMSE on the Validation data
+
+## 2.11 Simple Feature Engineering 
+* This is used to improve our model by adding more Features
+
+## 2.12 Categorical Variables 
+* These are variables that are typically strings e.g make of car, model
+
+* It's data types are objects
+
+* we add these variables to our model to improve our model 
+
+* we encode it by representing them with a bunch of binary columns e.g number of doors for instance
+
+
+## 2.13 Regularization 
+this is a way to solve the problem of duplicated columns
+in the previous lesson we added more Categorical values which gave extremely large RMSE 
+In this lesson we learn why this happens using Regularization 
+
+* one possibility could be that there are duplicate features in our data
+* This would render the inverse of (XTX) non-existent
+
+* one way we could solve this is to add a small number (r) to the diagonal of the matrix
+* It could also be that our data is not super clean
+
+## 2.14 Tuning the model
+in this lesson we learn how to determine the best regularisation 'r' parameter for our linear regression model 
+
+*Then when we get the best r, we run on our Validation dataset to see if it gives a good score 
+
+## 2.15 Using The Model 
+Here we train the final model on the test dataset by coming the training data and validation data as a single training model 
+* the we check the RMSE
+* So it shouldn't be too different from what we got in the Validation dataset
