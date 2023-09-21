@@ -38,8 +38,12 @@ Test 20%
 linear regression is a model used for predicting numbers so that the output of a model is a number
 Therefore the formula for linear regression is
 
+$g(x_i) = w_0 + x_{i1} \cdot w_1 + x_{i2} \cdot w_2 + ... + x_{in} \cdot w_n$.
+
+$g(x_i) = w_0 + \displaystyle\sum_{j=1}^{n} w_j \cdot x_{ij}$
+
 in code is represented as:
-~~~~
+~~~~python 
 def path()
 ~~~~
 
