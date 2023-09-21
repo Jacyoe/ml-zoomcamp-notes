@@ -60,4 +60,23 @@ If we look at the $\displaystyle\sum_{j=1}^{n} w_j \cdot x_{ij}$ part in the abo
 We need to assure that the result is shown on the untransformed scale by using the inverse function `exp()`. 
 
 ## 2.7 Training a linear regression model - normal equation 
+ordinarily the solution to Xw = y does not exist
+because X is a rectangular matrix of many rows and few columns, therefore it's difficult to find the inverse of X
+* Normal equation
+  
+$w$ = $(X^TX)^{-1}X^Ty$
 
+Where:
+
+$X^TX$ is the Gram Matrix and it's inverse exists because it's a square matrix
+
+## 2.8 Baseline Model for Car Price Prediction Project 
+this where we actually solve the problem us
+
+we first implement our Train linear_regression model
+
+then we plot the prediction together with the trained model to see if we are correct
+if the prediction is not accurate, we will need a way to quantity how bad the model is using RMSE
+
+## RMSE - Root Mean Square Error
+we use this to objectively evaluate the performance of our linear regression model
