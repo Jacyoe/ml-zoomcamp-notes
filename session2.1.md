@@ -36,4 +36,10 @@ Test 20%
 
 ## 2.5 Linear Regression 
 linear regression is a model used for predicting numbers so that the output of a model is a number
+Therefore the formula for linear regression is
+
+in code is represented as:
+~~~~
+def path()
+~~~~
 
