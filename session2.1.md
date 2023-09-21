@@ -26,7 +26,14 @@ np.log1p([...]) is used to get rid of long-tail distribution. This makes the plo
 *also check for missing values
 
 ## 2.4 Setting Up the Validation Framework 
+using pandas and numpy 
 * split the dataset into three
-Train 60% 
+Train 60%
 validation 20%
 Test 20%
+
+* Afterwards the target data  must be deleted to prevent it from being used accidentally for training purposes
+
+## 2.5 Linear Regression 
+linear regression is a model used for predicting numbers so that the output of a model is a number
+
